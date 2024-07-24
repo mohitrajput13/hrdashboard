@@ -1,8 +1,8 @@
 import React from 'react';
 
-const RecentActivity = () => {
+const RecentActivity = ({isMinimized}) => {
   return (
-    <div className="recent-activity card mb-3">
+    <div className={` ${!isMinimized ? 'recent-activity' : 'minimized-recent-activity'}  mt-1 card `}>
       <div className="card-body">
         <h5>Recently Activity</h5>
         <p>You Posted a New Job</p>

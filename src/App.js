@@ -17,26 +17,26 @@ function App() {
       <Slidebar isMinimized={minimized} />
       <div className={` ${minimized ? 'appDiv' : 'minizedAppDiv'}`}>
         <Navbar isMinimized={minimized} setMinimized={setMinimized} />
-        <div className=" w-100 p-1" style={{border:"1px solid red"}}>
+        <div className=" w-100 p-1" >
           <div className="d-flex w-100 justify-content-between flex-column p-2" >
             <div>
               <h4>Dashboard</h4>
             </div>
-            <div className="all-component d-flex flex-row">
-              <div  className=" d-flex flex-column ">
-                <div className="d-flex flex-row " >
+            <div className="all-component w-100 d-flex  flex-row">
+              <div  className="component-1 d-flex flex-column ">
+                <div className="component-1-1 d-flex w-100 flex-row " >
                   <AvailablePosition/>
                 </div>
-                <div className="d-flex flex-row pt-2">
-                  <TotalEmployees />
+                <div className="component-1-1 d-flex w-100 flex-row pt-2">
+                  <TotalEmployees isMinimized={minimized} />
                 </div>
-                <div className="d-flex flex-row pt-2">
-                  <Announcements/>
+                <div className="component-1-1 w-100 d-flex flex-row pt-2">
+                  <Announcements isMinimized={minimized}/>
                 </div>
               </div>
-              <div className="d-flex flex-column">
-                <RecentActivity />
-                <Schedule/>
+              <div className="component-2  d-flex flex-column">
+                <RecentActivity  isMinimized={minimized}/>
+                <Schedule isMinimized={minimized}/>
               </div>
             </div>
           </div>

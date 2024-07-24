@@ -1,6 +1,6 @@
 import React from 'react';
 import { getImages } from '../constants/imagePath';
-const TotalEmployees= () => {
+const TotalEmployees= ({isMinimized}) => {
  const data =[{
     id: 1,
     heading: "Total Employees",
@@ -17,7 +17,7 @@ const TotalEmployees= () => {
       image:getImages().frame52
     }]
     return (<>
-      {data.map((item)=><div className="total-employees pt-3 d-flex flex-row">
+      {data.map((item)=><div className={` ${!isMinimized ? 'total-employees' : 'minized-total-employees'}  d-flex flex-row`}>
         <div >
           <h6>{item.heading}</h6>
           <h3>{item.position}</h3>

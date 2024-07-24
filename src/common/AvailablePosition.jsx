@@ -27,7 +27,7 @@ const AvailablePosition = () => {
     }
   ];
   return (<>
-    {body.map((item)=><div style={{backgroundColor:item.background}} className="available card justify-content-between   ">
+    {body.map((item)=><div style={{backgroundColor:item.background}} className="available  card justify-content-between   ">
       <div  className="card-body ">
              <h6>{item.heading}</h6>
              <h3>{item.position}</h3>

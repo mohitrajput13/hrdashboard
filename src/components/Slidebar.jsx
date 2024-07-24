@@ -3,7 +3,7 @@ import '../styles/commonStyle.css'
 function Slidebar({isMinimized}){
     
     return <>
-        <div style={{border:"1px solid black" }} className={` ${!isMinimized ? 'w-25 sidebar':'minized'} flex-column sidebar-style-2 fixed-top`} >
+        <div  className={` ${!isMinimized ? 'w-25 sidebar':'minized'} flex-column sidebar-style-2 fixed-top`} >
             <div className="logo-header align-center  w-100" >
            {!isMinimized && <img className=" logosmall top_margin ps-2 align-center ms-1 mx-3  " src={getImages().small_logo} /> } 
             <img className={`${!isMinimized ?'logo':'minimized-logo'} top_margin ps-2  align-center  ms-1 mx-3 `} style={{width:'180px'}} src={getImages().logo} />
